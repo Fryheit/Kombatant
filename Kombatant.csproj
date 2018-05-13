@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0AF64A9B-12B9-4808-9013-A4B5279F7D49}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kombatant</RootNamespace>
+    <AssemblyName>Kombatant</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Annotations\Annotations.cs" />
+    <Compile Include="Constants\Action.cs" />
+    <Compile Include="Constants\Attack.cs" />
+    <Compile Include="Constants\Aura.cs" />
+    <Compile Include="Constants\GameObject.cs" />
+    <Compile Include="Constants\Hotkey.cs" />
+    <Compile Include="Enums\ClassJobEffectType.cs" />
+    <Compile Include="Enums\FollowMode.cs" />
+    <Compile Include="Enums\WaypointGenerationMode.cs" />
+    <Compile Include="Enums\TargetingMode.cs" />
+    <Compile Include="Extensions\CharacterExtension.cs" />
+    <Compile Include="Extensions\GameObjectExtension.cs" />
+    <Compile Include="Extensions\LocalPlayerExtension.cs" />
+    <Compile Include="Extensions\PartyMemberExtension.cs" />
+    <Compile Include="Forms\ClassicSettingsForm.cs" />
+    <Compile Include="Forms\ClassicSettingsForm.Designer.cs">
+      <DependentUpon>ClassicSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Models\SettingsFormModel.cs" />
+    <Compile Include="Forms\SettingsForm.cs" />
+    <Compile Include="Helpers\CallStackHelper.cs" />
+    <Compile Include="Helpers\FullyObservableCollection.cs" />
+    <Compile Include="Helpers\LogHelper.cs" />
+    <Compile Include="Helpers\OverlayHelper.cs" />
+    <Compile Include="Helpers\PulseFlagHelper.cs" />
+    <Compile Include="Helpers\WaitHelper.cs" />
+    <Compile Include="Helpers\WpfHelper.cs" />
+    <Compile Include="Interfaces\ILogicExecutor.cs" />
+    <Compile Include="Kombatant.cs" />
+    <Compile Include="Helpers\HotkeyHelper.cs" />
+    <Compile Include="Logic\Avoidance.cs" />
+    <Compile Include="Logic\Convenience.cs" />
+    <Compile Include="Logic\DPS.cs" />
+    <Compile Include="Logic\CommenceDuty.cs" />
+    <Compile Include="Logic\Healer.cs" />
+    <Compile Include="Logic\Mechanics.cs" />
+    <Compile Include="Logic\Movement.cs" />
+    <Compile Include="Logic\Tank.cs" />
+    <Compile Include="Logic\Target.cs" />
+    <Compile Include="Resources\AssemblyInfo.cs" />
+    <Compile Include="Resources\Controls.Designer.cs" />
+    <Compile Include="Resources\Localization.Designer.cs" />
+    <Compile Include="Settings\BotBase.cs" />
+    <Compile Include="Settings\Fleeting.cs" />
+    <Compile Include="Settings\Hotkeys.cs" />
+    <Compile Include="Settings\Models\DynamicHotkey.cs" />
+    <Compile Include="Settings\Models\TargetObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GreyMagic, Version=1.0.41.0, Culture=neutral, PublicKeyToken=260525fa2b0e778a">
+      <HintPath>..\..\..\Dev_RebornBuddy64Beta\GreyMagic.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RebornBuddy, Version=1.0.181.0, Culture=neutral, PublicKeyToken=48d7174f8a943034">
+      <HintPath>..\..\..\Dev_RebornBuddy64Beta\RebornBuddy.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Forms\SettingsControl.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ClassicSettingsForm.resx">
+      <DependentUpon>ClassicSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controls.resx" />
+    <EmbeddedResource Include="Resources\Localization.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.md" />
+    <Content Include="Resources\Audio\alamhigo_initiatesoulextraction.wav" />
+    <Content Include="Resources\Audio\alamhigo_thesoulrebels.wav" />
+    <Content Include="Resources\Audio\byakko_behold.wav" />
+    <Content Include="Resources\Audio\byakko_nomoregames.wav" />
+    <Content Include="Resources\Audio\byakko_steelyourself.wav" />
+    <Content Include="Resources\Audio\byakko_thereisnoturningback.wav" />
+    <Content Include="Resources\Audio\byakko_youaremine.wav" />
+    <Content Include="Resources\Audio\Placeholder.txt" />
+    <Content Include="Resources\Audio\susano_lettherevelsbegin.wav" />
+    <Content Include="Resources\Audio\susano_makeway.wav" />
+    <Content Include="Resources\Audio\susano_nowcomethourpart.wav" />
+    <Content Include="Resources\Audio\susano_rejoice.wav" />
+    <Content Include="Resources\Audio\susano_risetotheoccasion.wav" />
+    <Content Include="Resources\Font\DroidSans-Bold.ttf" />
+    <Content Include="Resources\Font\DroidSans.ttf" />
+    <Content Include="Resources\Image\Khloe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Documentation" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image\Kombatant.ico" />
+    <None Include="Resources\Image\Kombatant.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string" />
+                            <xsd:attribute name="name" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+
+    <!-- Name of the botbase -->
+    <data name="Name_Kombatant" xml:space="preserve">
+        <value>Kombatant</value>
+    </data>
+
+    <!-- Various messages -->
+    <data name="Msg_Not30Tps_Log" xml:space="preserve">
+        <value>
+*************************** [ KOMBATANT WARNING! ] ***************************
+*                                                                            *
+* Operating at a tickrate other than 30! Botbase might not work as expected! *
+*    For optimal botbase performance, please set your TPS to exactly 30.     *
+*                                                                            *
+******************************************************************************
+        </value>
+    </data>
+    <data name="Msg_Not30Tps" xml:space="preserve">
+        <value>Running at a tickrate other than 30 TPS!&#13;See RebornBuddy log for more details.</value>
+    </data>
+    <data name="Msg_AutoFaceTargetOff" xml:space="preserve">
+        <value>Auto Face Target DISABLED</value>
+    </data>
+    <data name="Msg_AutoFaceTargetOn" xml:space="preserve">
+        <value>Auto Face Target ENABLED</value>
+    </data>
+    <data name="Msg_AutonomousOff" xml:space="preserve">
+        <value>Autonomous Mode DISABLED</value>
+    </data>
+    <data name="Msg_AutonomousOn" xml:space="preserve">
+        <value>Autonomous Mode ENABLED</value>
+    </data>
+    <data name="Msg_AutoSyncFate" xml:space="preserve">
+        Target is part of FATE "{0}", syncing level...
+    </data>
+    <data name="Msg_AutoTargetOff" xml:space="preserve">
+        <value>Auto Targeting DISABLED</value>
+    </data>
+    <data name="Msg_AutoTargetOn" xml:space="preserve">
+        <value>Auto Targeting ENABLED</value>
+    </data>
+    <data name="Msg_AvoidanceFinished" xml:space="preserve">
+        <value>Avoidance finished, stopping movement...</value>
+    </data>
+    <data name="Msg_AvoidanceOff" xml:space="preserve">
+        <value>Avoidance DISABLED</value>
+    </data>
+    <data name="Msg_AvoidanceOn" xml:space="preserve">
+        <value>Avoidance ENABLED</value>
+    </data>
+    <data name="Msg_AvoidanceDisabledOnBossStart" xml:space="preserve">
+        <value>Fighting {0}!&#13;Avoidance will PAUSE</value>
+    </data>
+    <data name="Msg_Log_AvoidanceDisabledOnBossStart" xml:space="preserve">
+        <value>Fighting known boss. Avoidance will temporarily PAUSE.</value>
+    </data>
+    <data name="Msg_AvoidanceDisabledOnBossEnd" xml:space="preserve">
+        <value>Fight is over.&#13;Avoidance will RESUME</value>
+    </data>
+    <data name="Msg_Log_AvoidanceDisabledOnBossEnd" xml:space="preserve">
+        <value>Fight is over. Avoidance will RESUME.</value>
+    </data>
+    <data name="Msg_DutyReady" xml:space="preserve">
+        <value>Duty is ready!</value>
+    </data>
+    <data name="Msg_DutyConfirm" xml:space="preserve">
+        <value>Confirming Duty...</value>
+    </data>
+    <data name="Msg_MechanicWarning_StandStill" xml:space="preserve">
+        <value>{0}!&#13;Stop moving or attacking!</value>
+    </data>
+    <data name="Msg_MechanicWarning_StandStillOnZero" xml:space="preserve">
+        <value>{0}!&#13;Stop all activities before the timer reaches zero!</value>
+    </data>
+    <data name="Msg_MechanicWarning_Gaze" xml:space="preserve">
+        <value>{0}!&#13;Turn away before the cast completes!</value>
+    </data>
+    <data name="Msg_NewTargetSelected" xml:space="preserve">
+        <value>New target selected: {0} {1}</value>
+    </data>
+    <data name="Msg_Paused" xml:space="preserve">
+        <value>Kombatant PAUSED</value>
+    </data>
+    <data name="Msg_Unpaused" xml:space="preserve">
+        <value>Kombatant RESUMED</value>
+    </data>
+    <data name="Msg_PulseFlagDisabled" xml:space="preserve">
+        <value>Disabling {0}</value>
+    </data>
+    <data name="Msg_PulseFlagEnabled" xml:space="preserve">
+        <value>Enabling {0}</value>
+    </data>
+    <data name="Msg_ReloadedSettings" xml:space="preserve">
+        <value>Settings have been reloaded.</value>
+    </data>
+
+    <!-- Duty Finder Psyches - quotes and dumb fun -->
+    <data name="Msg_DutyPsyche0" xml:space="preserve">
+        <value>Let the revels begin!</value>
+    </data>
+    <data name="Msg_DutyPsyche1" xml:space="preserve">
+        <value>Rise, rise to the occasion!</value>
+    </data>
+    <data name="Msg_DutyPsyche2" xml:space="preserve">
+        <value>10 Gil says someone is not going to accept...</value>
+    </data>
+    <data name="Msg_DutyPsyche3" xml:space="preserve">
+        <value>So excited!</value>
+    </data>
+    <data name="Msg_DutyPsyche4" xml:space="preserve">
+        <value>And so are we!</value>
+    </data>
+    <data name="Msg_DutyPsyche5" xml:space="preserve">
+        <value>REJOICE!</value>
+    </data>
+    <data name="Msg_DutyPsyche6" xml:space="preserve">
+        <value>Initiate soul extraction!</value>
+    </data>
+    <data name="Msg_DutyPsyche7" xml:space="preserve">
+        <value>Behold, fury given form!</value>
+    </data>
+    <data name="Msg_DutyPsyche8" xml:space="preserve">
+        <value>No more games!</value>
+    </data>
+    <data name="Msg_DutyPsyche9" xml:space="preserve">
+        <value>Mechanics are for cars!</value>
+    </data>
+
+    <!-- Settings window title -->
+    <data name="UI_SettingsWindowTitle" xml:space="preserve">
+        <value>Kombatant Settings</value>
+    </data>
+
+    <!-- Tab headers -->
+    <data name="UI_Header_About" xml:space="preserve">
+        <value>About</value>
+    </data>
+    <data name="UI_Header_CombatRoutine" xml:space="preserve">
+        <value>CR Logic</value>
+    </data>
+    <data name="UI_Header_Convenience" xml:space="preserve">
+        <value>Convenience</value>
+    </data>
+    <data name="UI_Header_Hotkeys" xml:space="preserve">
+        <value>Hotkeys</value>
+    </data>
+    <data name="UI_Header_Movement" xml:space="preserve">
+        <value>Movement</value>
+    </data>
+    <data name="UI_Header_Targeting" xml:space="preserve">
+        <value>Targeting</value>
+    </data>
+
+    <!-- CR Behaviors tab -->
+    <data name="UI_CombatBuff" xml:space="preserve">
+        <value>Combat Buff</value>
+    </data>
+    <data name="UI_Tooltip_CombatBuff" xml:space="preserve">
+        <value>Enable the combat routine to execute the CombatBuff behavior.</value>
+    </data>
+    <data name="UI_Combat" xml:space="preserve">
+        <value>Combat</value>
+    </data>
+    <data name="UI_Tooltip_Combat" xml:space="preserve">
+        <value>Enable the combat routine to execute the Combat behavior.</value>
+    </data>
+    <data name="UI_Heal" xml:space="preserve">
+        <value>Heal</value>
+    </data>
+    <data name="UI_Tooltip_Heal" xml:space="preserve">
+        <value>Enable the combat routine to execute the Heal behavior.</value>
+    </data>
+    <data name="UI_PreCombatBuff" xml:space="preserve">
+        <value>Pre-Combat Buff</value>
+    </data>
+    <data name="UI_Tooltip_PreCombatBuff" xml:space="preserve">
+        <value>Enable the combat routine to execute the PreCombatBuff behavior.</value>
+    </data>
+    <data name="UI_PullBuff" xml:space="preserve">
+        <value>Pull Buff</value>
+    </data>
+    <data name="UI_Tooltip_PullBuff" xml:space="preserve">
+        <value>Enable the combat routine to execute the PullBuff behavior.</value>
+    </data>
+    <data name="UI_Pull" xml:space="preserve">
+        <value>Pull</value>
+    </data>
+    <data name="UI_Tooltip_Pull" xml:space="preserve">
+        <value>Enable the combat routine to execute the Pull behavior.</value>
+    </data>
+    <data name="UI_SmartPull" xml:space="preserve">
+        <value>Smart Pull</value>
+    </data>
+    <data name="UI_Tooltip_SmartPull" xml:space="preserve">
+        <value>As a non-tank, do not engage enemies before your tank.</value>
+    </data>
+    <data name="UI_Rest" xml:space="preserve">
+        <value>Rest</value>
+    </data>
+    <data name="UI_Tooltip_Rest" xml:space="preserve">
+        <value>Enable the combat routine to execute the Rest behavior.</value>
+    </data>
+    <data name="UI_SelectCr" xml:space="preserve">
+        <value>Select Combat Routine</value>
+    </data>
+
+    <!-- Convenience tab -->
+    <data name="UI_AutoAcceptQuests" xml:space="preserve">
+        <value>Auto Accept Quests</value>
+    </data>
+    <data name="UI_Tooltip_AutoAcceptQuests" xml:space="preserve">
+        <value>Automatically accept/complete quests.</value>
+    </data>
+    <data name="UI_AutoAcceptDutyFinder" xml:space="preserve">
+        <value>Auto Commence Duty</value>
+    </data>
+    <data name="UI_Tooltip_AutoAcceptDutyFinder" xml:space="preserve">
+        <value>Automatically commences a duty when it is ready.</value>
+    </data>
+    <data name="UI_AutoAdvanceDialogue" xml:space="preserve">
+        <value>Auto Advance Dialogue</value>
+    </data>
+    <data name="UI_Tooltip_AutoAdvanceDialogue" xml:space="preserve">
+        <value>Automatically skip dialogue.</value>
+    </data>
+    <data name="UI_Lbl_AutoEmoteCommand" xml:space="preserve">
+        <value>Auto Emote Command</value>
+    </data>
+    <data name="UI_Tooltip_AutoEmoteCommand" xml:space="preserve">
+        <value>Emote which should automatically be kept up, i.e. "/grin motion"</value>
+    </data>
+    <data name="UI_Lbl_AutoEmoteInterval" xml:space="preserve">
+        <value>Auto Emote Interval</value>
+    </data>
+    <data name="UI_Tooltip_AutoEmoteInterval" xml:space="preserve">
+        <value>Resend the emote every x seconds.</value>
+    </data>
+    <data name="UI_AutoEndActEncounters" xml:space="preserve">
+        <value>Auto End ACT Encounters</value>
+    </data>
+    <data name="UI_Tooltip_AutoEndActEncounters" xml:space="preserve">
+        <value>Will automatically send "/echo end" to the chat when no enemies are around for longer than 10 seconds.</value>
+    </data>
+    <data name="UI_AutoFaceTarget" xml:space="preserve">
+        <value>Auto Face Target</value>
+    </data>
+    <data name="UI_Tooltip_AutoFaceTarget" xml:space="preserve">
+        <value>Automatically face the target.</value>
+    </data>
+    <data name="UI_AutoSkipCutscenes" xml:space="preserve">
+        <value>Auto Skip Cutscenes</value>
+    </data>
+    <data name="UI_Tooltip_AutoSkipCutscenes" xml:space="preserve">
+        <value>Automatically skip cutscenes.</value>
+    </data>
+    <data name="UI_AutoSprint" xml:space="preserve">
+        <value>Auto Sprint</value>
+    </data>
+    <data name="UI_Tooltip_AutoSprint" xml:space="preserve">
+        <value>Automatically sprint whenever the action is available.</value>
+    </data>
+    <data name="UI_AutoSyncFate" xml:space="preserve">
+        <value>Auto Sync to FATE</value>
+    </data>
+    <data name="UI_Tooltip_AutoSyncFate" xml:space="preserve">
+        <value>Automatically syncs to a FATE when a FATE mob is selected as your target.</value>
+    </data>
+    <data name="UI_Lbl_DutyFinderWaitTime" xml:space="preserve">
+        <value>Seconds To Auto Commence</value>
+    </data>
+    <data name="UI_IsAutonomous" xml:space="preserve">
+        <value>Enable Autonomous Actions</value>
+    </data>
+    <data name="UI_Tooltip_IsAutonomous" xml:space="preserve">
+        <value>When enabled, other components will treat this botbase as one without user input. This will cause combat routines to autonmatically move into the correct positions etc.</value>
+    </data>
+    <data name="UI_IsPaused" xml:space="preserve">
+        <value>Paused</value>
+    </data>
+    <data name="UI_Tooltip_IsPaused" xml:space="preserve">
+        <value>Enable/Disable the combat assist temporarily. Please note that Kombatant will always start paused.</value>
+    </data>
+    <data name="UI_DutyFinderNotify" xml:space="preserve">
+        <value>Notify When Ready</value>
+    </data>
+    <data name="UI_Tooltip_DutyFinderNotify" xml:space="preserve">
+        <value>Play a random sound effect when the Duty Finder is ready.</value>
+    </data>
+    <data name="UI_MechanicWarnings" xml:space="preserve">
+        <value>Mechanic Warnings</value>
+    </data>
+    <data name="UI_Tooltip_MechanicWarnings" xml:space="preserve">
+        <value>Will take control from the player when certain attacks occur.</value>
+    </data>
+
+    <!-- Targeting tab -->
+    <data name="UI_AutoTarget" xml:space="preserve">
+        <value>Auto Target</value>
+    </data>
+    <data name="UI_Tooltip_AutoTarget" xml:space="preserve">
+        <value>Enable automatic targeting logic.</value>
+    </data>
+    <data name="UI_FateFilter" xml:space="preserve">
+        <value>Enable FATE mob filter</value>
+    </data>
+    <data name="UI_Tooltip_FateFilter" xml:space="preserve">
+        <value>When enabled, targeting strategies will target FATE mobs as long as the player is inside a FATE area.</value>
+    </data>
+    <data name="UI_Lbl_AutoTargetingMode" xml:space="preserve">
+        <value>Target Selection Strategy</value>
+    </data>
+    <data name="UI_AutoTargetSwitch" xml:space="preserve">
+        <value>Allow Target Switching</value>
+    </data>
+    <data name="UI_Tooltip_AutoTargetSwitch" xml:space="preserve">
+        <value>Enables/disables automatic selection of a new target, even when the old one is still alive.</value>
+    </data>
+    <data name="UI_Lbl_TargetScanMaxDistance" xml:space="preserve">
+        <value>Max Distance for target scan</value>
+    </data>
+
+    <!-- Movement tab -->
+    <data name="UI_EnableAvoidance" xml:space="preserve">
+        <value>Enable Avoidance</value>
+    </data>
+    <data name="UI_Tooltip_EnableAvoidance" xml:space="preserve">
+        <value>Allow RebornBuddy to avoid telegraphed attacks.</value>
+    </data>
+    <data name="UI_PauseAvoidanceOnBosses" xml:space="preserve">
+        <value>Pause Avoidance on Bosses</value>
+    </data>
+    <data name="UI_Tooltip_PauseAvoidanceOnBosses" xml:space="preserve">
+        <value>Will automatically pause avoidance when engaging a known boss.</value>
+    </data>
+    <data name="UI_Lbl_WaypointGenerationMode" xml:space="preserve">
+        <value>Waypoint Generation</value>
+    </data>
+    <data name="UI_Lbl_FollowMode" xml:space="preserve">
+        <value>Follow Mode</value>
+    </data>
+</root>

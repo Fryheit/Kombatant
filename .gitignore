@@ -1,0 +1,6 @@
+# Kombatant .gitignore
+.idea/
+bin/
+obj/
+*.DotSettings
+*.DotSettings.user

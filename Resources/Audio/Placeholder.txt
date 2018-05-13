@@ -1,0 +1,3 @@
+If you want to duty notification sound to played, please place at least one WAV file in this directory.
+
+I highly recommend Susano's banter.
