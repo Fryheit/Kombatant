@@ -165,6 +165,7 @@ There is **no** explicit support for the Chinese version of the bot.
    The exact reason for this behaviour is currently unknown.
 
 - **Auto-Follow Takeoff needs a bit of love.**
+
   It works but the solution is dodgy and prone to errors.
 
 ## FAQ

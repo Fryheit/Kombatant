@@ -343,6 +343,13 @@ namespace Kombatant.Constants
             7056,    // Motherbit
             7055,    // The Ultima Warrior
             7058,    // The Ultima Beast
+
+            // The Swallow's Compass
+            7200,    // Otengu
+            7202,    // Daidarabotchi
+            7203,    // Qitian Dasheng
+            7204,    // Shadow of the Sage
+            7205,    // Servant of the Sage
         };
 
         /// <summary>
