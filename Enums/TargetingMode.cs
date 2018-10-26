@@ -19,6 +19,8 @@ namespace Kombatant.Enums
         BestAoE = 40,
         [Description("Whitelisted enemies")]
         OnlyWhitelisted = 50,
+        [Description("Assist fixed character")]
+        AssistFixedCharacter = 60,
         [Description("Lowest health")]
         LowestHealth = 100,
         [Description("Lowest health percent")]
