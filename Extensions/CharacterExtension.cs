@@ -62,7 +62,8 @@ namespace Kombatant.Extensions
                    || character.CurrentJob == ClassJobType.Gladiator
                    || character.CurrentJob == ClassJobType.Marauder
                    || character.CurrentJob == ClassJobType.Paladin
-                   || character.CurrentJob == ClassJobType.Warrior;
+                   || character.CurrentJob == ClassJobType.Warrior
+                   || character.CurrentJob == ClassJobType.Gunbreaker;
         }
 
         /// <summary>
@@ -108,7 +109,8 @@ namespace Kombatant.Extensions
                    || character.CurrentJob == ClassJobType.Machinist
                    || character.CurrentJob == ClassJobType.RedMage
                    || character.CurrentJob == ClassJobType.Summoner
-                   || character.CurrentJob == ClassJobType.Thaumaturge;
+                   || character.CurrentJob == ClassJobType.Thaumaturge
+                   || character.CurrentJob == ClassJobType.Dancer;
         }
 
         /// <summary>
@@ -122,7 +124,8 @@ namespace Kombatant.Extensions
                    || character.CurrentJob == ClassJobType.Arcanist
                    || character.CurrentJob == ClassJobType.BlackMage
                    || character.CurrentJob == ClassJobType.RedMage
-                   || character.CurrentJob == ClassJobType.Summoner;
+                   || character.CurrentJob == ClassJobType.Summoner
+                   || character.CurrentJob == ClassJobType.BlueMage;
         }
 
         /// <summary>
