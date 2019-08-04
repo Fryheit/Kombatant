@@ -15,10 +15,14 @@ namespace Kombatant.Enums
         AssistLeader = 20,
         [Description("Assist tank")]
         AssistTank = 30,
+        [Description("Highest level character")]
+        AssistHighestLvl = 40,
         [Description("Best AoE target")]
-        BestAoE = 40,
+        BestAoE = 50,
         [Description("Whitelisted enemies")]
-        OnlyWhitelisted = 50,
+        OnlyWhitelisted = 60,
+        [Description("Assist fixed character")]
+        AssistFixedCharacter = 70,
         [Description("Lowest health")]
         LowestHealth = 100,
         [Description("Lowest health percent")]

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Xaml;
 using ff14bot;
 using ff14bot.Managers;
 using ff14bot.Objects;
@@ -87,6 +88,14 @@ namespace Kombatant.Logic
 
                     case TargetingMode.AssistLeader:
                         potentialTarget = TargetAssistLeader();
+                        break;
+
+                    case TargetingMode.AssistFixedCharacter:
+                        potentialTarget = TargetAssistFixedCharacter();
+                        break;
+
+                    case TargetingMode.AssistHighestLvl:
+                        potentialTarget = TargetAssistHighestLvlCharacter();
                         break;
                 }
 
@@ -245,6 +254,32 @@ namespace Kombatant.Logic
         }
 
         /// <summary>
+        /// Target selection: Assist fixed character.
+        /// </summary>
+        /// <returns>Potential BattleCharacter object as the new target or null when no suitable target was found.</returns>
+        private BattleCharacter TargetAssistFixedCharacter()
+        {
+            // No character name set.
+            if (string.IsNullOrEmpty(Settings.BotBase.Instance.FixedCharacterName))
+                return null;
+
+            var character = GameObjectManager.GetObjectsOfType<BattleCharacter>()
+                .FirstOrDefault(c => c.Name == Settings.BotBase.Instance.FixedCharacterName && c.Distance2D() < 25);
+
+            // Character is not in the vicinity...
+            if (character == null || !character.IsValid)
+                return null;
+
+            // Character doesn't have a target or it's not what we consider an enemy.
+            if (!character.HasTarget ||
+                !character.TargetGameObject.IsEnemy())
+                return null;
+
+            return character.TargetGameObject as BattleCharacter;
+        }
+
+
+        /// <summary>
         /// Target selection: Assist party leader.
         /// </summary>
         /// <returns>Potential BattleCharacter object as the new target or null when no suitable target was found.</returns>
@@ -291,6 +326,26 @@ namespace Kombatant.Logic
                 return null;
 
             return nearestTank.BattleCharacter.TargetGameObject as BattleCharacter;
+        }
+
+        private BattleCharacter TargetAssistHighestLvlCharacter()
+        {
+            if (!Core.Me.IsInMyParty() ||
+                !PartyManager.VisibleMembers.Any(member => member.SyncdLevel > Core.Me.ClassLevel))
+                return null;
+
+            var highestLevelChar = PartyManager.VisibleMembers
+                .OrderByDescending(member => member.SyncdLevel)
+                .ThenByDescending(member => member.Name)
+                .FirstOrDefault();
+
+            if (highestLevelChar == null || highestLevelChar.IsMe)
+                return null;
+
+            if (!highestLevelChar.BattleCharacter.HasTarget || !highestLevelChar.BattleCharacter.TargetGameObject.IsEnemy())
+                return null;
+
+            return highestLevelChar.BattleCharacter.TargetGameObject as BattleCharacter;
         }
 
         /// <summary>
